@@ -1,0 +1,13 @@
+{
+  "markdown.extension.toc.omittedFromToc": {},
+  "markdown.extension.toc.levels": "1..6",
+  "beautify.config": "",
+  "beautify.language": {
+    "html": ["html", "php", "erb"],
+    "css": [],
+    "js": []
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "git.ignoreLimitWarning": true
+}

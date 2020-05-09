@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Let's Eat</title>
+	</head>
+
+	<body>
+		<!-- container -->
+		<div class="container-fluid" style="padding: 0;">
+			<!-- header -->
+			<div class="jumbotron jumbotron-fluid jumbo-bg text-white mb-0">
+				<div class="container">
+					<h1 class="display-4 text-center header-title">
+						MEALS
+					</h1>
+					<h5 class="text-center text-white bold">
+						Temukan Makanan Favoritmu Disini Sekarang Juga
+					</h5>
+					<div class="navbar m-3">
+						<input
+							class="form-control"
+							type="search"
+							placeholder="masukkan nama makanan"
+							aria-label="Search"
+							id="searchMeal"
+						/>
+					</div>
+
+					<p class="lead text-center">
+						<a class="btn btn-light btn-lg" href="#list-header">Let's View</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- info manfaat makanan -->
+			<div class="row py-4">
+				<h3 class="mx-auto info-header">Manfaat Makanan Bagi Tubuh</h3>
+				<div
+					class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 p-2 mx-auto"
+				>
+					<div class="col mb-4">
+						<div class="card h-100 info-card mx-auto">
+							<img
+								src="https://img.icons8.com/bubbles/100/000000/lungs.png"
+								class="card-img-top mx-auto d-block p-3 info-image"
+							/>
+							<div class="card-body">
+								<card-title title="Menjaga Kesehatan Fungsi Organ"></card-title>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card h-100 info-card mx-auto">
+							<img
+								src="https://img.icons8.com/bubbles/100/000000/brain.png"
+								class="card-img-top mx-auto d-block p-3 info-image"
+							/>
+							<div class="card-body">
+								<card-title
+									title="Memperkuat Konsentrasi dan Daya Ingat"
+								></card-title>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card h-100 info-card mx-auto">
+							<img
+								src="https://img.icons8.com/bubbles/100/000000/standing-man.png"
+								class="card-img-top mx-auto d-block p-3 info-image"
+							/>
+							<div class="card-body">
+								<card-title title="Menjaga Sistem Kekebalan Tubuh"></card-title>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card h-100 info-card mx-auto">
+							<img
+								src="https://img.icons8.com/bubbles/100/000000/for-experienced.png"
+								class="card-img-top mx-auto d-block p-3 info-image"
+							/>
+							<div class="card-body">
+								<card-title title="Menjaga Kestabilan Emosi"></card-title>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mx-auto">
+				<!-- navbar -->
+				<div class="col-md-4 col-lg-3 daftar accordion" id="accordionExample">
+					<ul
+						class="nav nav-tabs w-100"
+						id="myTab"
+						role="tablist"
+						style="background-color: #ffffff;"
+					>
+						<li class="nav-item w-50">
+							<a
+								class="nav-link active text-info"
+								id="pills-category-tab"
+								data-toggle="pill"
+								href="#pills-category"
+								role="tab"
+								aria-controls="pills-category"
+								aria-selected="true"
+								aria-expanded="false"
+							>
+								<h5 class="text-center">
+									Categories
+								</h5>
+							</a>
+						</li>
+						<li class="nav-item w-50">
+							<a
+								class="nav-link text-info"
+								id="pills-country-tab"
+								data-toggle="pill"
+								href="#pills-country"
+								role="tab"
+								aria-controls="pills-country"
+								aria-selected="false"
+								aria-expanded="false"
+							>
+								<h5 class="text-center">
+									Countries
+								</h5>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="pills-tabContent">
+						<div
+							class="tab-pane fade show active"
+							id="pills-category"
+							role="tabpanel"
+							aria-labelledby="pills-category-tab"
+							data-parent="#accordionExample"
+						>
+							<ul
+								class="list-group bg-light list-group-flush"
+								id="listCategories"
+							></ul>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="pills-country"
+							role="tabpanel"
+							aria-labelledby="pills-country-tab"
+							data-parent="#accordionExample"
+						>
+							<ul
+								class="list-group bg-light list-group-flush"
+								id="listCountries"
+							></ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- content -->
+				<div class="col-12 col-sm-12 col-md-8 col-lg-9 mx-auto">
+					<h3 class="text-center mb-4" id="list-header">Meal List</h3>
+					<!-- list makanan -->
+					<div
+						class="row row-cols-1 row-cols-sm-1 row-cols-lg-4 row-cols-md-3"
+						id="listMeals"
+					></div>
+					<div class="row not-found"></div>
+
+					<!-- detail makanan -->
+					<div
+						class="modal fade"
+						id="mealModal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="mealModalTitle"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog" role="document">
+							<div class="modal-content" id="details"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div class="card text-center">
+				<h3 class="socmed-title">Visit Our Social Media</h3>
+				<div class="d-flex justify-content-around w-75 mx-auto p-3">
+					<!-- social media -->
+					<div class="card m-2 h-100 border-0 position-relative icon-image">
+						<img src="https://img.icons8.com/ios/50/000000/instagram-new.png" />
+						<div class="overlay">
+							<a href="https://www.instagram.com/" target="_blank">
+								<img
+									src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png"
+									class="icon"
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="card m-2 h-100 border-0 position-relative icon-image">
+						<img src="https://img.icons8.com/ios/50/000000/facebook-new.png" />
+						<div class="overlay">
+							<a href="https://www.facebook.com/" target="_blank">
+								<img
+									src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"
+									class="icon"
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="card m-2 h-100 border-0 position-relative icon-image">
+						<img src="https://img.icons8.com/ios/50/000000/twitter.png" />
+						<div class="overlay">
+							<a href="https://www.twitter.com/" target="_blank">
+								<img
+									src="https://img.icons8.com/ios-filled/50/000000/twitter.png"
+									class="icon"
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="card m-2 h-100 border-0 position-relative icon-image">
+						<img src="https://img.icons8.com/ios/50/000000/youtube.png" />
+						<div class="overlay">
+							<a href="https://www.youtube.com/" target="_blank">
+								<img
+									src="https://img.icons8.com/ios-filled/50/000000/youtube.png"
+									class="icon"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- copyright -->
+				<div class="card-footer mt-4 text-white">
+					© 2020 Ari Risnawadi
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

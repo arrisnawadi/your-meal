@@ -1,0 +1,216 @@
+/* import font dari google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap');
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #eff0f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3cb371;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2e8b57;
+}
+
+/* menu category dan country */
+.meal-category:hover,
+.meal-country:hover {
+	cursor: pointer;
+	background-color: #17a2b8;
+}
+
+/* header background */
+.jumbo-bg {
+	background: url('https://images.unsplash.com/photo-1576866209830-589e1bfbaa4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+}
+
+/* header title */
+.header-title {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.info-card {
+	transition: box-shadow 0.5s ease 0.1s;
+}
+
+.info-card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+/* navigasi */
+.daftar {
+	z-index: 2;
+}
+
+.info-card {
+	background-color: #eff0f1;
+}
+
+.info-header,
+#meal-list,
+.socmed-title {
+	font-family: 'Catamaran', sans-serif;
+}
+
+#meal-list {
+	margin: 10px 0;
+}
+
+.meal-title:hover {
+	cursor: pointer;
+	color: #17a2b8;
+}
+
+.card-footer {
+	background-color: #2e8b57;
+}
+
+/* social media hover effect */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.3s ease;
+	background-color: #ffffff;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.icon-image:hover {
+	cursor: pointer;
+}
+
+.icon-image:hover .overlay {
+	opacity: 1;
+}
+
+.socmed-title {
+	margin: 20px;
+}
+
+/* extra large screen */
+@media (min-width: 1200px) {
+	/* set info image size */
+	.info-image {
+		width: 50%;
+	}
+}
+
+/* large screen */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	/* set info image size */
+	.info-image {
+		width: 50%;
+	}
+}
+
+/* medium screen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	/* resize info card */
+	.info-card {
+		width: 80%;
+	}
+
+	/* set info image size */
+	.info-image {
+		width: 50%;
+	}
+
+	.meal-title {
+		font-size: 16px;
+	}
+}
+
+/* small screen */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	/* resize info card */
+	.info-card {
+		width: 50%;
+	}
+
+	/* set info image size */
+	.info-image {
+		width: 50%;
+	}
+
+	/* atur position menu menjadi fixed */
+	.daftar {
+		position: fixed;
+		top: 0;
+		padding: 0;
+	}
+
+	#myTab > li:hover {
+		border-bottom: 2px solid #17a2b8;
+	}
+
+	#listCountries,
+	#listCategories {
+		max-height: 295px;
+		overflow-y: auto;
+	}
+
+	.jumbotron-fluid {
+		margin-top: 45px;
+	}
+}
+
+/* extra small screen */
+@media (max-width: 575.98px) {
+	/* resize info card */
+	.info-card {
+		width: 60%;
+	}
+
+	/* set info image size */
+	.info-image {
+		width: 50%;
+	}
+
+	/* atur position menu menjadi fixed */
+	.daftar {
+		position: fixed;
+		top: 0;
+		padding: 0;
+	}
+
+	#myTab > li:hover {
+		border-bottom: 2px solid #17a2b8;
+	}
+
+	#listCountries,
+	#listCategories {
+		max-height: 295px;
+		overflow-y: auto;
+	}
+
+	.jumbotron-fluid {
+		margin-top: 45px;
+	}
+}
