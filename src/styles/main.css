@@ -106,10 +106,6 @@ body {
 	cursor: pointer;
 }
 
-.icon-image:hover .overlay {
-	opacity: 1;
-}
-
 .socmed-title {
 	margin: 20px;
 }
@@ -120,6 +116,10 @@ body {
 	.info-image {
 		width: 50%;
 	}
+
+	.icon-image:hover .overlay {
+		opacity: 1;
+	}
 }
 
 /* large screen */
@@ -127,6 +127,10 @@ body {
 	/* set info image size */
 	.info-image {
 		width: 50%;
+	}
+
+	.icon-image:hover .overlay {
+		opacity: 1;
 	}
 }
 
@@ -145,6 +149,10 @@ body {
 	.meal-title {
 		font-size: 16px;
 	}
+
+	.icon-image:hover .overlay {
+		opacity: 1;
+	}
 }
 
 /* small screen */
@@ -156,6 +164,10 @@ body {
 
 	/* set info image size */
 	.info-image {
+		width: 75%;
+	}
+
+	.meal-card {
 		width: 75%;
 	}
 
@@ -185,11 +197,10 @@ body {
 @media (max-width: 575.98px) {
 	/* resize info card */
 	.info-card {
-		width: 80%;
+		width: 75%;
 	}
 
-	/* set info image size */
-	.info-image {
+	.meal-card {
 		width: 75%;
 	}
 

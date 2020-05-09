@@ -53,7 +53,7 @@ export const allMeals = (categories) => {
     categories.forEach(category => {
         listCategoryElement.innerHTML += `
             <div class="col mb-4 d-flex">
-                <div class="card h-100 mx-auto d-block">
+                <div class="card h-100 mx-auto d-block meal-card">
                     <img src=${category.strCategoryThumb} class="card-img-top" alt="category_image">
                     <div class="card-body text-center">
                         <h5 class="card-title meal-title" id="${category.strCategory}">${category.strCategory}</h5>
@@ -80,7 +80,7 @@ export const mealList = (meals) => {
     meals.forEach(meal => {
         listMealElement.innerHTML += `
             <div class="col mb-4">
-                <div class="card h-100">
+                <div class="card h-100 mx-auto meal-card">
                     <img src=${meal.strMealThumb} class="card-img-top" alt="category_image">
                     <div class="card-body text-center">
                         <h5 class="card-title meal-title" id="${meal.idMeal}" data-toggle="modal"
