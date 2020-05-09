@@ -132,7 +132,7 @@ export const mealDetail = (meals) => {
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item font-weight-bold border-bottom-0 py-0">Jenis masakan:</li>
                         <li class="list-group-item py-0">${meal.strArea}</li>
-                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Bahan yang diperlukan:</li>
+                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Bahan:</li>
                         <li class="list-group-item py-0">${filterBahan}</li>
                         <li class="list-group-item font-weight-bold border-bottom-0 py-0">Takaran:</li>
                         <li class="list-group-item py-0">${filterTakaran}</li>

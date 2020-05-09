@@ -151,12 +151,12 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
 	/* resize info card */
 	.info-card {
-		width: 50%;
+		width: 75%;
 	}
 
 	/* set info image size */
 	.info-image {
-		width: 50%;
+		width: 75%;
 	}
 
 	/* atur position menu menjadi fixed */
@@ -185,12 +185,12 @@ body {
 @media (max-width: 575.98px) {
 	/* resize info card */
 	.info-card {
-		width: 60%;
+		width: 80%;
 	}
 
 	/* set info image size */
 	.info-image {
-		width: 50%;
+		width: 75%;
 	}
 
 	/* atur position menu menjadi fixed */
