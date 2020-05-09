@@ -45,35 +45,7 @@ export const allCountries = (countries) => {
     });
 }
 
-// menampilkan semua kategori makanan
-export const allMeals = (categories) => {
-    const listCategoryElement = document.getElementById("listMeals")
-    listCategoryElement.innerHTML = "";
-
-    categories.forEach(category => {
-        listCategoryElement.innerHTML += `
-            <div class="col mb-4 d-flex">
-                <div class="card h-100 mx-auto d-block meal-card">
-                    <img src=${category.strCategoryThumb} class="card-img-top" alt="category_image">
-                    <div class="card-body text-center">
-                        <h5 class="card-title meal-title" id="${category.strCategory}">${category.strCategory}</h5>
-                    </div>
-                </div>
-            </div>
-            `;
-    });
-
-    // melakukan filter berdasaran kategori makanan yang dipilih
-    const selects = document.querySelectorAll(".meal-title");
-    selects.forEach(select => {
-        select.addEventListener("click", event => {
-            const mealId = event.target.id;
-            mealByCategory(mealId);
-        });
-    });
-}
-
-// menampilkan daftar semua makanan yang dipiih
+// menampilkan daftar makanan yang dipiih
 export const mealList = (meals) => {
     listMealElement.innerHTML = "";
 

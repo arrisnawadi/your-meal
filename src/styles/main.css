@@ -10,7 +10,7 @@ body {
 }
 
 :target {
-	padding-top: 50px; /* = to height of navbar */
+	padding-top: 50px;
 	margin-top: -50px;
 }
 
@@ -125,6 +125,10 @@ body {
 	.icon-image:hover .overlay {
 		opacity: 1;
 	}
+
+	.contact-email {
+		width: 25%;
+	}
 }
 
 /* large screen */
@@ -136,6 +140,10 @@ body {
 
 	.icon-image:hover .overlay {
 		opacity: 1;
+	}
+
+	.contact-email {
+		width: 25%;
 	}
 }
 
@@ -157,6 +165,10 @@ body {
 
 	.icon-image:hover .overlay {
 		opacity: 1;
+	}
+
+	.contact-email {
+		width: 50%;
 	}
 }
 
@@ -200,6 +212,10 @@ body {
 	.icon-image:hover .overlay {
 		opacity: 0;
 	}
+
+	.contact-email {
+		width: 50%;
+	}
 }
 
 /* extra small screen */
@@ -236,5 +252,9 @@ body {
 
 	.icon-image:hover .overlay {
 		opacity: 0;
+	}
+
+	.contact-email {
+		width: 50%;
 	}
 }

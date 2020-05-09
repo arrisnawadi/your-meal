@@ -1,4 +1,4 @@
-import { allCategories, allCountries, allMeals, mealList, mealDetail } from "./layout";
+import { allCategories, allCountries, mealList, mealDetail } from "./layout";
 
 function app() {
     // memanggil element
@@ -70,19 +70,24 @@ function app() {
     }
 
     // ambil semua kategori makanan
-    const getAllCat = async () => {
+    const randomMeal = async () => {
         try {
-            const response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
+            const abjad = ["e", "f", "h", "k", "l", "m", "p", "r", "t"];
+            const random = Math.floor(Math.random() * abjad.length);
+            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${abjad[random]}`);
             const responseJson = await response.json();
             if (responseJson) {
-                allMeals(responseJson.categories);
+                mealList(responseJson.meals);
             } else {
                 alert("error");
             }
         } catch (error) {
             notFound.innerHTML = `
             <div class="alert alert-danger w-75 p-2 text-center mx-auto" role="alert">
-                Kategori makanan tidak ada!
+                Data tidak ditemukan!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             `;
         }
@@ -91,7 +96,7 @@ function app() {
     document.addEventListener("DOMContentLoaded", () => {
         getCategories();
         getCountries();
-        getAllCat();
+        randomMeal();
     })
 }
 
@@ -109,6 +114,9 @@ export const mealByCategory = async (categoryId) => {
         notFound.innerHTML = `
             <div class="alert alert-danger w-75 p-2 text-center mx-auto" role="alert">
                 Data tidak ditemukan!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             `;
     }
@@ -128,6 +136,9 @@ export const mealByCountry = async (categoryId) => {
         notFound.innerHTML = `
             <div class="alert alert-danger w-75 p-2 text-center mx-auto" role="alert">
                 Data tidak ditemukan!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             `;
     }
