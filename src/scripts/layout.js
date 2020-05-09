@@ -119,7 +119,7 @@ export const mealDetail = (meals) => {
         let filterTakaran = takaran.replace(/(\,(?=\s\,)|(?<=\s)\,)/g, "");
 
         listMealElement.innerHTML += `
-            <div class="modal-header">
+            <div class="modal-header border-0">
                 <h5 class="modal-title text-info font-weight-bold" id="mealModalTitle">${meal.strMeal}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -127,7 +127,7 @@ export const mealDetail = (meals) => {
             </div>
 
             <div class="modal-body">
-                <div class="card">
+                <div class="card border-0">
                     <img class="card-img-top mx-auto d-block mb-3" src=${meal.strMealThumb} alt="meal picture" style="width:50%;" />
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item font-weight-bold border-bottom-0 py-0">Jenis masakan:</li>

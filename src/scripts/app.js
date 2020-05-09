@@ -9,7 +9,10 @@ function app() {
     searchInput.addEventListener("search", function () {
         searchMeals(this.value);
         this.value = "";
-        this.parentElement.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1].firstElementChild.scrollIntoView();
+        this.parentElement.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1].firstElementChild.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     });
 
     // ambil data makanan berdasarkan pencarian

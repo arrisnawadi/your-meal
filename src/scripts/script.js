@@ -28,6 +28,8 @@ function jsSetting() {
     const media = window.matchMedia("(max-width: 767.98px)");
     myFunction(media);
     media.addListener(myFunction);
+
+
 }
 
 export default jsSetting;
