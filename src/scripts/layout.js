@@ -111,12 +111,8 @@ export const mealDetail = (meals) => {
         let instruction = meal.strInstructions.replace(/(?<=\w\.)\s/g, "<br>");
 
         // filter bahan makanan
-        let bahan = `${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}, ${meal.strIngredient8}, ${meal.strIngredient9}, ${meal.strIngredient10}, ${meal.strIngredient11}, ${meal.strIngredient12}, ${meal.strIngredient13}, ${meal.strIngredient14}, ${meal.strIngredient15}, ${meal.strIngredient16}, ${meal.strIngredient17}, ${meal.strIngredient18}, ${meal.strIngredient19}, ${meal.strIngredient20}`;
-        let filterBahan = bahan.replace(/(\,(?=\s\,)|(?<=\s)\,)/g, "");
-
-        // filter takaran makanan
-        let takaran = `${meal.strMeasure1}, ${meal.strMeasure2}, ${meal.strMeasure3}, ${meal.strMeasure4}, ${meal.strMeasure5}, ${meal.strMeasure6}, ${meal.strMeasure7}, ${meal.strMeasure8}, ${meal.strMeasure9}, ${meal.strMeasure10}, ${meal.strMeasure11}, ${meal.strMeasure12}, ${meal.strMeasure13}, ${meal.strMeasure14}, ${meal.strMeasure15}, ${meal.strMeasure16}, ${meal.strMeasure17}, ${meal.strMeasure18}, ${meal.strMeasure19}, ${meal.strMeasure20}`;
-        let filterTakaran = takaran.replace(/(\,(?=\s\,)|(?<=\s)\,)/g, "");
+        let bahan = `${meal.strMeasure1} ${meal.strIngredient1}, ${meal.strMeasure2} ${meal.strIngredient2}, ${meal.strMeasure3} ${meal.strIngredient3}, ${meal.strMeasure4} ${meal.strIngredient4}, ${meal.strMeasure5} ${meal.strIngredient5}, ${meal.strMeasure6} ${meal.strIngredient6}, ${meal.strMeasure7} ${meal.strIngredient7}, ${meal.strMeasure8} ${meal.strIngredient8}, ${meal.strMeasure9} ${meal.strIngredient9}, ${meal.strMeasure10} ${meal.strIngredient10}, ${meal.strMeasure11} ${meal.strIngredient11}, ${meal.strMeasure12} ${meal.strIngredient12}, ${meal.strMeasure13} ${meal.strIngredient13}, ${meal.strMeasure14} ${meal.strIngredient14}, ${meal.strMeasure15} ${meal.strIngredient15}, ${meal.strMeasure16} ${meal.strIngredient16}, ${meal.strMeasure17} ${meal.strIngredient17}, ${meal.strMeasure18} ${meal.strIngredient18}, ${meal.strMeasure19} ${meal.strIngredient19}, ${meal.strMeasure20} ${meal.strIngredient20}`;
+        let filterBahan = bahan.replace(/\,(?!\s\w)/g, "");
 
         listMealElement.innerHTML += `
             <div class="modal-header border-0">
@@ -130,13 +126,11 @@ export const mealDetail = (meals) => {
                 <div class="card border-0">
                     <img class="card-img-top mx-auto d-block mb-3" src=${meal.strMealThumb} alt="meal picture" style="width:50%;" />
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Jenis masakan:</li>
+                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Country:</li>
                         <li class="list-group-item py-0">${meal.strArea}</li>
-                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Bahan:</li>
+                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Ingredients:</li>
                         <li class="list-group-item py-0">${filterBahan}</li>
-                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Takaran:</li>
-                        <li class="list-group-item py-0">${filterTakaran}</li>
-                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Langkah pembuatan:</li>
+                        <li class="list-group-item font-weight-bold border-bottom-0 py-0">Steps:</li>
                         <li class="list-group-item py-0">${instruction}</li>
                     </ul>
                 </div>
