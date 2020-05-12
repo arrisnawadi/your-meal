@@ -30,6 +30,10 @@ body {
 	background: #2e8b57;
 }
 
+.scroll-margin-top {
+	scroll-margin-top: 50px;
+}
+
 /* menu category dan country */
 .meal-category:hover,
 .meal-country:hover {

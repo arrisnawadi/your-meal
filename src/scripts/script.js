@@ -1,5 +1,6 @@
 function jsSetting() {
     // pilih elemen
+    const listHeader = document.getElementById("list-header")
     const menu = document.querySelectorAll(".nav-link");
     const catMenu = document.getElementById("pills-category");
     const ctrMenu = document.getElementById("pills-country");
@@ -15,12 +16,14 @@ function jsSetting() {
             });
             catMenu.setAttribute("class", "collapse");
             ctrMenu.setAttribute("class", "collapse");
+            listHeader.classList.add("scroll-margin-top")
         } else {
             menu.forEach(link => {
                 link.setAttribute("data-toggle", "pill");
             });
             catMenu.setAttribute("class", "tab-pane fade show active");
             ctrMenu.setAttribute("class", "tab-pane fade");
+            listHeader.classList.remove("scroll-margin-top")
         }
     }
 
