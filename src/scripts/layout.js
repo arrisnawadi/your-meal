@@ -20,6 +20,7 @@ export const allCategories = (categories) => {
         select.addEventListener("click", event => {
             const categoryId = event.target.id;
             mealByCategory(categoryId);
+            console.log(categoryId);
         });
     });
 }
